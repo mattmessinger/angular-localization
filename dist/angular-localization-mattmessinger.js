@@ -1,8 +1,8 @@
 /*!
- * angular-localization-spiria :: v1.6.0 :: 2017-05-10
+ * angular-localization-mattmessinger :: v1.6.0 :: 2020-08-04
  * web: http://doshprompt.github.io/angular-localization
  *
- * Copyright (c) 2017 | Rahul Doshi
+ * Copyright (c) 2020 | Rahul Doshi
  * License: MIT
  */
 ;(function (angular, window, document, undefined) {
@@ -29,8 +29,8 @@ angular.module('ngLocalize')
             cookieStore,
             sym = localeConf.allowNestedJson ? '/' : '.';
 
-        if (localeConf.persistSelection && $injector.has('$cookieStore')) {
-            cookieStore = $injector.get('$cookieStore');
+        if (localeConf.persistSelection && $injector.has('$cookies')) {
+            cookieStore = $injector.get('$cookies');
         }
 
         function splitToken(tok){

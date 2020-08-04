@@ -5,13 +5,12 @@ var DIST_DIR = 'dist',
 
     date = require('moment'),
     del = require('del'),
-    karma = require('karma').server,
 
     runSequence = require('run-sequence'),
 
     gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
-    
+
     banner = [
         '/*!',
         ' * <%= package.title || package.name %> :: v<%= package.version %> :: <%= package.todayDate  %>',
@@ -87,13 +86,6 @@ gulp.task('default', function(done) {
     runSequence(['scripts', 'styles'], done)
 });
 
-gulp.task('test', ['lint'], function(done) {
-    karma.start({
-        configFile: path.join(__dirname, 'karma.conf.js')
-    }, function() {
-        done();
-    });
-});
 
 gulp.task('lint', function() {
     return gulp.src(SRC_FILES)

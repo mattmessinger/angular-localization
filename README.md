@@ -1,4 +1,4 @@
-# angular-localization 
+# angular-localization
 
 *AngularJS Localization done right. Kudos to the original author, Rahul Doshi, for this fantastic plugin.*
 *Due to a slowdown of activities on the main repo, we have forked it since we use it extensively in our angular projects.*
@@ -7,8 +7,8 @@
 [![Build Status](https://travis-ci.org/Spiria-Digital/angular-localization.svg?branch=master)](https://travis-ci.org/Spiria-Digital/angular-localization.svg?branch=master)
 [![Code Climate](https://codeclimate.com/github/Spiria-Digital/angular-localization/badges/gpa.svg)](https://codeclimate.com/github/Spiria-Digital/angular-localization)
 [![Test Coverage](https://codeclimate.com/github/Spiria-Digital/angular-localization/badges/coverage.svg)](https://codeclimate.com/github/Spiria-Digital/angular-localization/coverage)
-[![Bower version](https://badge.fury.io/bo/angular-localization-spiria.svg)](http://badge.fury.io/bo/angular-localization)
-[![GitHub license](https://img.shields.io/github/license/Spiria-Digital/angular-localization-spiria.svg)](https://github.com/Spiria-Digital/angular-localization/blob/master/LICENSE)
+[![Bower version](https://badge.fury.io/bo/angular-localization-mattmessinger.svg)](http://badge.fury.io/bo/angular-localization)
+[![GitHub license](https://img.shields.io/github/license/Spiria-Digital/angular-localization-mattmessinger.svg)](https://github.com/Spiria-Digital/angular-localization/blob/master/LICENSE)
 
 ___
 
@@ -92,7 +92,7 @@ Please refer to this [document][commit-message-format] for a detailed explanatio
 The easiest way to install the `ngLocalize` module is via [Bower](http://bower.io/):
 
 ```shell
-bower install angular-localization-spiria --save
+bower install angular-localization-mattmessinger --save
 ```
 
 Two other options are available:
@@ -100,7 +100,7 @@ Two other options are available:
 - [Download the latest release](https://github.com/Spiria-Digital/angular-localization/archive/master.zip).
 - Clone the repo: `git clone https://github.com/Spiria-Digital/angular-localization.git`.
 
-You can then include `angular-localization-spiria` after its dependencies,
+You can then include `angular-localization-mattmessinger` after its dependencies,
 [angular](https://github.com/angular/bower-angular) and
 [angular-cookies](https://github.com/angular/bower-angular-cookies):
 
@@ -108,7 +108,7 @@ You can then include `angular-localization-spiria` after its dependencies,
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-localization-spiria/angular-localization-spiria.js"></script>
+<script src="bower_components/angular-localization-mattmessinger/angular-localization-mattmessinger.js"></script>
 ```
 
 ### Wiring It Up
@@ -333,7 +333,7 @@ Will fetch the file `myFile` in the folder1/folder2 directories. Inside that fil
 }
 ```
 
-__Legacy support:__ By default, nested json is disallowed, which means that older project should not encounter any issues. 
+__Legacy support:__ By default, nested json is disallowed, which means that older project should not encounter any issues.
 However, if you have a legacy project that you wish to change to nested json, a refactoring __will__ be necessary (mainly replacing the `.` by `/` in the i18n tokens. ie: `common.errors.required` would need to become `common/errors.required`);
 
 __NOTE:__ When constructing its dictionary, it builds an object for each "namespace" (json files). If you have a file structure as such:
@@ -390,7 +390,7 @@ angular.module('myApp', ['ngLocalize'])
 
 As you can see, The `locale` service expects the localization key as the first argument and an optional {Object|Array|String} with user data as the second argument.
 
-The promise returns the object containing the localization keys & values: 
+The promise returns the object containing the localization keys & values:
 
 ```js
 angular.module('myApp', ['ngLocalize'])
@@ -405,7 +405,7 @@ angular.module('myApp', ['ngLocalize'])
 
 ### i18n filter
 
-The `i18n` filter provides the same functionality as the service.  
+The `i18n` filter provides the same functionality as the service.
 It can be useful in templates where the localization strings are dynamic, e.g. for error messages:
 
 ```html
