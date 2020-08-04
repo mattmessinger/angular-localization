@@ -8,8 +8,8 @@ angular.module('ngLocalize')
             cookieStore,
             sym = localeConf.allowNestedJson ? '/' : '.';
 
-        if (localeConf.persistSelection && $injector.has('$cookieStore')) {
-            cookieStore = $injector.get('$cookieStore');
+        if (localeConf.persistSelection && $injector.has('$cookies')) {
+            cookieStore = $injector.get('$cookies');
         }
 
         function splitToken(tok){
